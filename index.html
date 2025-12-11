@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Acme — Beautiful Mock Landing</title>
+  <meta name="description" content="Mock landing page for Acme product showcasing hero, features and CTA">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7c5cff;--accent-2:#4fd1c5;--white:#e6eef8}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.4;color:var(--white);background:linear-gradient(180deg,#071022 0%, #071427 60%)}
+    .container{max-width:1100px;margin:0 auto;padding:2rem}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+    .brand{display:flex;gap:.75rem;align-items:center;font-weight:700}
+    .logo{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:8px;display:inline-block}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    a.btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#042033;padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+    .eyebrow{color:var(--accent-2);font-weight:700;font-size:.85rem}
+    h1{font-size:2.2rem;margin:.5rem 0;color:var(--white)}
+    p.lead{color:var(--muted);margin:0 0 1.25rem}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.25rem}
+    .card{background:rgba(255,255,255,0.03);padding:1rem;border-radius:10px}
+    .card h3{margin:.25rem 0 0;font-size:1rem}
+    .mockframe{background:linear-gradient(180deg,#071a2b, #072031);border-radius:12px;padding:1rem;color:var(--muted)}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+    .feature{background:rgba(255,255,255,0.02);padding:1rem;border-radius:8px}
+    .feature h4{margin:.5rem 0 0}
+
+    footer{margin-top:3rem;padding:2rem 0;color:var(--muted);font-size:.9rem}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .cards{grid-template-columns:repeat(1,1fr)}
+      .features{grid-template-columns:repeat(1,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand"><span class="logo" aria-hidden></span><span>Acme</span></div>
+      <div class="nav-links">
+        <a href="#features" style="color:var(--muted);text-decoration:none">Features</a>
+        <a href="#pricing" style="color:var(--muted);text-decoration:none">Pricing</a>
+        <a class="btn" href="#cta">Get Started</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">New — 2025</div>
+          <h1>Simplify how teams build delightful products</h1>
+          <p class="lead">Acme gives you a fast, beautiful starting point for your next project — components, conventions, and a delightful developer experience out of the box.</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <a class="btn" href="#cta" style="display:inline-block">Start free trial</a>
+            <a href="#" style="color:var(--muted);align-self:center;text-decoration:none;padding:.6rem 1rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04)">Live demo</a>
+          </div>
+
+          <div class="cards" aria-hidden>
+            <div class="card"><strong>30k+</strong><div style="color:var(--muted)">Developers</div></div>
+            <div class="card"><strong>99.99%</strong><div style="color:var(--muted)">Uptime</div></div>
+            <div class="card"><strong>Trusted</strong><div style="color:var(--muted)">by teams worldwide</div></div>
+          </div>
+        </div>
+
+        <aside class="mockframe" aria-label="product mockup">
+          <svg width="100%" height="220" viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <rect x="8" y="8" width="584" height="204" rx="10" fill="#021422"/>
+            <rect x="28" y="28" width="200" height="36" rx="8" fill="#0b3a4a"/>
+            <rect x="28" y="76" width="540" height="28" rx="6" fill="#092b36"/>
+            <rect x="28" y="112" width="260" height="28" rx="6" fill="#092b36"/>
+            <rect x="28" y="148" width="180" height="28" rx="6" fill="#072a38"/>
+          </svg>
+          <p style="margin-top:.75rem;color:var(--muted)">Quick mockup of the dashboard — responsive, fast, and extensible.</p>
+        </aside>
+      </section>
+
+      <section id="features" class="features">
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="vertical-align:middle"><path d="M12 2l3 7h7l-5.5 4.2L20 22l-8-5-8 5 1.5-8.8L0 9h7l3-7z" fill="url(#g)"/></svg>
+          <h4>Design system</h4>
+          <p style="color:var(--muted)">Reusable components and tokens to move fast without compromising quality.</p>
+        </div>
+        <div class="feature">
+          <h4>Fast performance</h4>
+          <p style="color:var(--muted)">Optimized markup and tiny bundle sizes so pages load instantly for users.</p>
+        </div>
+        <div class="feature">
+          <h4>Developer friendly</h4>
+          <p style="color:var(--muted)">Well-documented, testable patterns that make collaboration simple.</p>
+        </div>
+      </section>
+
+      <section id="cta" style="background:linear-gradient(180deg,rgba(124,92,255,0.08),transparent);padding:1.5rem;border-radius:12px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <strong style="display:block;font-size:1.05rem">Ready to ship faster?</strong>
+          <div style="color:var(--muted)">Start a free trial — no credit card required.</div>
+        </div>
+        <div>
+          <a class="btn" href="#" style="padding:.7rem 1.25rem">Create account</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div style="color:var(--muted)">© 2025 Acme, Inc. All rights reserved.</div>
+        <div style="color:var(--muted)">Built with care • <a href="#" style="color:var(--accent-2);text-decoration:none">Docs</a> • <a href="#" style="color:var(--accent-2);text-decoration:none">Support</a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
