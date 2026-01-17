@@ -1,0 +1,59 @@
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Text Styling */
+.soon-text {
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    opacity: 0;
+    animation: fadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    background: linear-gradient(180deg, #FFFFFF 0%, #666666 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Selection */
+::selection {
+    background: #333;
+    color: #fff;
+}
