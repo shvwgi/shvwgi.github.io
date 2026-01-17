@@ -1,5 +1,7 @@
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -33,7 +35,7 @@ body {
     opacity: 0;
     animation: fadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     background: linear-gradient(180deg, #FFFFFF 0%, #666666 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));
 }
@@ -45,6 +47,7 @@ body {
         transform: translateY(20px) scale(0.95);
         filter: blur(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
