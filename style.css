@@ -9,10 +9,10 @@
 
 :root {
     --canvas: #000000;
-    --ink: #f4f1e8;
-    --ink-soft: #c3c0b5;
-    --muted: #96948a;
-    --line: #3a3932;
+    --ink: #f2f2f2;
+    --ink-soft: #bcbcbc;
+    --muted: #8a8a8a;
+    --line: #222222;
     --mono: 'Geist Mono', ui-monospace, monospace;
     --sans: 'Geist', sans-serif;
     --serif: 'EB Garamond', serif;
